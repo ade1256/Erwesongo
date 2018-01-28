@@ -1,0 +1,343 @@
+/*!
+Theme Name: Erwesongo
+Theme URI: http://erwesongo.com/
+Author: Ade Prasetyo
+Author URI: http://www.ade1256.com/
+Description: Erwesongo adalah sebuah website komunitas warga RW 09 Sidabowa di Banyumas
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: erwesongo
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+@font-face { font-family: 'OpenSans-Regular'; src: url("../fonts/OpenSans-Regular.ttf"); }
+@font-face { font-family: 'OpenSans-Bold'; src: url("../fonts/OpenSans-Bold.ttf"); }
+@font-face { font-family: 'OpenSans-SemiBold'; src: url("../fonts/OpenSans-SemiBold.ttf"); }
+/* STICKY TOP */
+.sticky-top { position: relative; top: 0; width: 100%; min-height: 50px; padding-bottom: 20px; background-color: #2c3e50; color: #fff; font-family: 'OpenSans-Regular',sans-serif; }
+.sticky-top span, .sticky-top p, .sticky-top a { float: left; position: relative; }
+.sticky-top span { top: 20px; padding-left: 0; padding-right: 10px; }
+.sticky-top p, .sticky-top a { top: 15px; padding-right: 30px; }
+.sticky-top a { text-decoration: none; color: #fff; }
+.sticky-top .kanan { float: right; position: relative; }
+.sticky-top .kanan span { top: 20px; padding-right: 0; padding-left: 10px; }
+.sticky-top .kanan p, .sticky-top .kanan a { top: 15px; padding-left: 30px; padding-right: 0; }
+
+/* --- NAVBAR --- */
+.navbar { position: relative; min-height: 80px; margin-bottom: 0; border: 0; background: #ecf0f1; }
+
+.navbar-nav > li > a { text-shadow: none; color: #333; font-family: 'OpenSans-Regular',sans-serif; font-size: 16px; }
+.navbar-nav > li.active > a {
+	background-color: #2980b9;
+	color: #fff;
+}
+@media (min-width: 768px) { .navbar { border: 0; } }
+@media (min-width: 768px) { .navbar-nav > li > a { padding-top: 30px; padding-bottom: 30px; } }
+.nav > li > a:focus, .nav > li > a:hover { text-decoration: none; background-color: #2980b9; color: #fff; }
+
+@media (min-width: 768px) { .navbar-form .form-group { display: inline-block; margin-bottom: 0; vertical-align: middle; padding: 15px 0px; } }
+.navbar-form { margin-right: 0; margin-bottom: 0; margin-left: 0; border: none; }
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+    background-color: #2980b9; border:none; }
+/* CAROUSEL HEADER */
+.main-text { position: absolute; top: 50px; width: 96.66666666666666%; color: #FFF; }
+
+.btn-min-block { min-width: 170px; line-height: 26px; }
+
+.btn-clear { color: #FFF; background-color: transparent; border-color: #FFF; margin-right: 15px; }
+
+.btn-clear:hover { color: #000; background-color: #FFF; }
+
+.carousel-inner { max-height: 638px; }
+
+.carousel-control { /*height: 638px;*/ }
+
+.carousel { /*height: 638px;*/ }
+
+.carousel-caption { bottom: 0; top: 30%; }
+.carousel-caption h3 { font-family: 'OpenSans-Bold',sans-serif; font-size: 36px; }
+.carousel-caption p { font-family: 'OpenSans-Regular',sans-serif; font-size: 16px; }
+.carousel-caption h3, .carousel-caption p { line-height: 30px; color: #fff; text-shadow: none; z-index: 9; }
+
+.carousel-inner > .item:before { position: absolute; content: ''; display: block; top: 0; left: 0; right: 0; bottom: 0; z-index: 1; background-color: rgba(0, 0, 0, 0.5); }
+
+.carousel-control .fa-angle-left, .carousel-control .fa-angle-right { position: absolute; top: 50%; font-size: 30px; color: #fff; border: 2px solid #fff; padding: 10px 20px; border-radius: 30px; }
+
+/* END CAROUSEL HEADER */
+/* SECTION */
+.section { padding-top: 50px; padding-bottom: 50px;}
+.section .garis { width: 50px; height: 1px; background-color: #2c3e50; position: relative; display: block; margin: 0 auto; margin-bottom: 20px; }
+.section h4 {margin-bottom: 17px; font-family: 'OpenSans-Bold',sans-serif; font-size: 24px; color: #000; letter-spacing: 2.9px; }
+.section .nav-tabs-tengah { width: 35%; margin: 0 auto; position: relative; }
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    color: #fff;
+    cursor: default;
+    background-color: #2c3e50;
+    border: none;
+    font-family: 'OpenSans-SemiBold',sans-serif;
+    font-size: 14px;
+}
+.nav-tabs>li>a{
+	    margin-right: 2px;
+    /* line-height: 1.42857143; */
+    /* border: 1px solid transparent; */
+    border-radius: 4px 4px 0 0;
+    font-family: 'OpenSans-SemiBold';
+    font-size: 14px;
+    color: #000;
+}
+.nav-tabs{
+	border-bottom: 0;
+}
+.section .row{
+	margin-top: 30px;
+}
+/* END SECTION */
+
+/* CARD */
+.post-card{
+	width: 100%;
+	position: relative;
+	background-color: #f7f7f7;
+	height: 400px;
+	box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.20);
+}
+
+.img-card{
+	position: relative;
+	display: block;
+	width: 100%;
+	border-top-left-radius: 4px; 
+	border-top-right-radius: 4px; 
+	height:250px;
+	background-color: #cacaca;
+}
+.desc-card{
+	width: 100%;
+	height: 150px;
+	border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px;
+	background-color: #2980b9;
+	padding-right: 30px;
+	padding-left: 30px;
+}
+.desc-card a{
+	font-family: 'OpenSans-Regular',sans-serif;
+	font-size: 14px;
+	line-height: 18px;
+	color: #fff;
+	position: relative;
+	top: 20px;
+	text-decoration: none;
+}
+.desc-card p.tanggal{color:#fff;float: left;margin-left: 10px;top: 40px;position: relative;}
+.desc-card span{top: 42px;float: left;color: #fff;position: relative;}
+.hover-card{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background-color: #2980b9;
+	top: 0;
+    border-radius: 4px;
+    display: none;
+    padding-top: 110px;
+    padding-left: 35px;
+    padding-right: 35px;
+    display: none;
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+
+}
+.post-card:hover .hover-card{
+	display: block;
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+}
+.hover-card a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    font-family: 'OpenSans-Regular';
+    font-size: 14px;
+    line-height: 24px;
+}
+.hover-card a:hover{
+	text-decoration: none;
+	color: #fff;
+}
+.hover-card span{
+	color: #fff;
+	float: left;
+
+}
+.hover-card p{
+	font-family: 'OpenSans-Regular';
+	font-size: 14px;
+	color: #fff;
+	float: left;
+	margin-left: 10px;
+}
+.hover-tanggal{
+	margin: 0 auto;
+    position: relative;
+    display: block;
+    width: 155px;
+    top: 30px;
+    /* height: 100px; */
+}
+a.read-more{
+    position: relative;
+    color: #fff;
+    padding: 20px 40px;
+    font-size: 14px;
+    font-family: 'OpenSans-Regular',sans-serif;
+    border: 1px solid #fff;
+    border-radius: 40px;
+    width: 165px;
+    margin-top: 30px;
+}
+/* ENDCARD */
+
+
+
+/* FOOTER */
+.footer{
+	position: relative;
+	width: 100%;
+	height: 333px;
+  background-color: #1f2b37;
+}
+.logo-footer{
+	position: relative;
+	margin: 0 auto;
+	width: 276px;
+	margin-top: 38px;
+}
+
+.menu-footer{
+width: 60%;
+position: relative;
+margin: 0 auto;
+margin-top: 30px;
+display: block;
+}
+.menu-footer ul{margin: 0;padding: 0;}
+.menu-footer ul li{
+	display: block;
+	float: left;
+	margin: 0px 23px;
+}
+.menu-footer ul li a{
+	text-decoration: none;
+	font-family: 'OpenSans-Regular',sans-serif;
+	font-size: 18px;
+	color: #fff;
+}
+
+.social-media{width: 25%;display: block;position: relative;margin: 0 auto;top: 37px;
+float: left;}
+.social-media a{float: left;margin: 0px 15px}
+.social-media img{float: left;}
+.footer-garis{
+	width: 700px;
+  height: 1px;
+  background-color: #ffffff;
+  display: block;
+ position: relative;
+ margin: 0 auto;
+ top: 150px;
+}
+.footer p{
+	text-align: center;
+	position: relative;
+	font-family: 'OpenSans-Regular',sans-serif;
+	color: #fff;
+	display: inline-block;
+	width: 100%;
+	top: 100px;
+}
+/* ENDFOOTER */
+
+
+/*** HALAMAN ***/
+.halaman{
+	padding-top: 50px;
+	width: 250px;
+	display: block;
+	margin: 0 auto;
+	position: relative;
+}
+/*** ENDHALAMAN ***/
+
+
+.lupa-password{
+	float: right;
+}
+
+.tombol-masuk{
+	width: 100%;
+	background-color:  #2980b9;
+	position: relative;
+	color: #fff;
+	padding: 15px 15px;
+	display: inline-block;
+	text-align: center;
+	border-radius: 4px;
+	top: 20px;
+
+}
+
+.tombol-masuk:hover{
+	text-decoration: none;
+	color: #fff;
+}
+
+
+
+
+
+
+/*responsive*/
+@media (max-width: 500px) { 
+.footer-garis{
+	width: 100%;
+	}
+/*.carousel-control.left {
+    left: -30px;
+    }
+.carousel-control.right {
+    right: 15px;
+    }*/
+.carousel-control .fa-angle-left, .carousel-control .fa-angle-right {
+    position: absolute;
+    left: 10%;
+    top: 38%;
+    font-size: 30px;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 5px 15px;
+    border-radius: 30px;
+    }
+    .social-media{width: 100%;display: block;position: relative;margin: 0 auto;top: 37px;
+text-align: center;}
+.social-media a {
+    float: left;
+    margin: 20px 5px;
+}
+.social-media{
+	padding-left: 20%;
+}
+}
