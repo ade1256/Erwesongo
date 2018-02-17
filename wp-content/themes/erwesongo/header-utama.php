@@ -8,7 +8,8 @@
  *
  * @package Erwesongo
  */
-
+$email = get_field('email',75);
+$nohp = get_field('nohp',75);
 ?> 
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -16,7 +17,6 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?> >
@@ -25,14 +25,15 @@
 		<div class="container">
 			<div class="col-md-12">
 				<span class="fa fa-phone fa-lg"></span>
-				<p>+6285786860530</p>
+				<!-- <p>+6285786860530</p> -->
+				<p><?php echo $nohp; ?></p>
 				<span class="fa fa-envelope fa-lg"></span>
-				<p>erwesongo@gmail.com</p>
+				<p><?php echo $email; ?></p>
 			
 
 				<div class="kanan">
 					
-					<a href="wp-login">Masuk</a>
+					<a href="<?php echo home_url();?>/wp-login.php">Masuk</a>
 					<span class="fa fa-sign-in fa-lg"></span>
 					
 					<!-- <a href="daftar.html">Daftar</a>
@@ -55,19 +56,21 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">
+				<a class="navbar-brand" href="<?php echo home_url();?>">
 					<img src="<?php echo get_template_directory_uri();?>/assets/img/logo_erwesongo.png"/>
 				</a>
 			</div>
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			
+
 				<?php wp_nav_menu(
 					array(
 						'theme_location' => 'menu-1',
 						'menu_id' => 'primary-menu',
 						'menu_class' => 'nav navbar-nav navbar-right',
-						'container_class' => 'collapse navbar-collapse'
+						'container_class' => 'collapse navbar-collapse',
+						'container_id' => 'bs-example-navbar-collapse-1'
 						)
 						) ;?>
 				<!-- <ul class="nav navbar-nav navbar-right">
@@ -92,58 +95,11 @@
 					</form>
 				</ul> -->
 
-			</div><!-- /.navbar-collapse -->
+		
 		</div><!-- /.container-fluid -->
 	</nav>
 	<!-- -- END NAVBAR -- -->
 
 
-	<!-- ------- CAROUSEL HEADER -->
 
-
-	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-		<ol class="carousel-indicators">
-			<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-			<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-			<li data-target="#carousel-example-generic" data-slide-to="2"></li>
-		</ol>
-		<div class="carousel-inner">
-			<div class="item active">
-				<img  src="<?php echo get_template_directory_uri();?>/assets/img/fabian-irsara-92113.jpg" alt="First slide"/>
-				<div class="carousel-caption">
-					<h3>
-						Erwesongo</h3>
-						<p>
-							
-							Sebuah website perumahan Griya Satriya yang memudahkan warga mendapatkan informasi secara cepat</p>
-						</div>
-					</div>
-					<div class="item">
-						<img src="<?php echo get_template_directory_uri();?>/assets/img/fabian-irsara-92113.jpg" alt="Second slide">
-						<div class="carousel-caption">
-							<h3>
-								Second slide</h3>
-								<p>
-									Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-								</div>
-							</div>
-							<div class="item">
-								<img src="<?php echo get_template_directory_uri();?>/assets/img/fabian-irsara-92113.jpg" alt="Third slide">
-								<div class="carousel-caption">
-									<h3>
-										Third slide</h3>
-										<p>
-											Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-										</div>
-									</div>
-								</div>
-								<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-									<span class="fa fa-angle-left"></span></a><a class="right carousel-control"
-									href="#carousel-example-generic" data-slide="next"><span class="fa fa-angle-right">
-								</span></a>
-							</div>
-
-
-							<!-- ------- END CAROUSEL HEADER -->
-
-						</body>
+				

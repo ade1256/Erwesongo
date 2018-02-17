@@ -8,7 +8,7 @@ Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: erwesongo
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+Tags: erwesongo,grid,magazine,website-desa,header-image
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -19,11 +19,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-
-
-@font-face { font-family: 'OpenSans-Regular'; src: url("../fonts/OpenSans-Regular.ttf"); }
-@font-face { font-family: 'OpenSans-Bold'; src: url("../fonts/OpenSans-Bold.ttf"); }
-@font-face { font-family: 'OpenSans-SemiBold'; src: url("../fonts/OpenSans-SemiBold.ttf"); }
+body{background-color: #f7f7f7;}
+@font-face { font-family: 'OpenSans-Regular'; src: url("assets/fonts/OpenSans-Regular.ttf"); }
+@font-face { font-family: 'OpenSans-Bold'; src: url("assets/fonts/OpenSans-Bold.ttf"); }
+@font-face { font-family: 'OpenSans-SemiBold'; src: url("assets/fonts/OpenSans-SemiBold.ttf"); }
+h1,h2,h3,h4,h5,h6{font-family: 'OpenSans-Regular',sans-serif}
 /* STICKY TOP */
 .sticky-top { position: relative; top: 0; width: 100%; min-height: 50px; padding-bottom: 20px; background-color: #2c3e50; color: #fff; font-family: 'OpenSans-Regular',sans-serif; }
 .sticky-top span, .sticky-top p, .sticky-top a { float: left; position: relative; }
@@ -35,12 +35,30 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .sticky-top .kanan p, .sticky-top .kanan a { top: 15px; padding-left: 30px; padding-right: 0; }
 
 /* --- NAVBAR --- */
+.navbar-toggle {
+	margin: 0;
+	top: 20px;
+	right: 30px;
+	background-color: #2c3e502b;
+	border: 1px solid #2c3e50;
+}
+.navbar-toggle .icon-bar {
+	background-color: #2c3e50;
+}
 .navbar { position: relative; min-height: 80px; margin-bottom: 0; border: 0; background: #ecf0f1; }
 
 .navbar-nav > li > a { text-shadow: none; color: #333; font-family: 'OpenSans-Regular',sans-serif; font-size: 16px; }
 .navbar-nav > li.active > a {
 	background-color: #2980b9;
 	color: #fff;
+}
+.navbar-collapse{
+	position: relative;
+
+}
+.navbar-collapse.collapse.in{
+	position: relative;
+	margin-top: 41px;
 }
 @media (min-width: 768px) { .navbar { border: 0; } }
 @media (min-width: 768px) { .navbar-nav > li > a { padding-top: 30px; padding-bottom: 30px; } }
@@ -49,26 +67,26 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @media (min-width: 768px) { .navbar-form .form-group { display: inline-block; margin-bottom: 0; vertical-align: middle; padding: 15px 0px; } }
 .navbar-form { margin-right: 0; margin-bottom: 0; margin-left: 0; border: none; }
 .nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
-    background-color: #2980b9; border:none; }
-/* CAROUSEL HEADER */
-.main-text { position: absolute; top: 50px; width: 96.66666666666666%; color: #FFF; }
+	background-color: #2980b9; border:none; }
+	/* CAROUSEL HEADER */
+	.main-text { position: absolute; top: 50px; width: 96.66666666666666%; color: #FFF; }
 
-.btn-min-block { min-width: 170px; line-height: 26px; }
+	.btn-min-block { min-width: 170px; line-height: 26px; }
 
-.btn-clear { color: #FFF; background-color: transparent; border-color: #FFF; margin-right: 15px; }
+	.btn-clear { color: #FFF; background-color: transparent; border-color: #FFF; margin-right: 15px; }
 
-.btn-clear:hover { color: #000; background-color: #FFF; }
+	.btn-clear:hover { color: #000; background-color: #FFF; }
 
-.carousel-inner { max-height: 638px; }
+	.carousel-inner { max-height: 638px; }
 
 .carousel-control { /*height: 638px;*/ }
 
 .carousel { /*height: 638px;*/ }
 
-.carousel-caption { bottom: 0; top: 30%; }
-.carousel-caption h3 { font-family: 'OpenSans-Bold',sans-serif; font-size: 36px; }
-.carousel-caption p { font-family: 'OpenSans-Regular',sans-serif; font-size: 16px; }
-.carousel-caption h3, .carousel-caption p { line-height: 30px; color: #fff; text-shadow: none; z-index: 9; }
+.carousel-caption { bottom: 0; top: 25%; }
+.carousel-caption h3 { font-family: 'OpenSans-Bold',sans-serif;font-size: 48px;letter-spacing: 5px; }
+.carousel-caption p { font-family: 'OpenSans-Regular',sans-serif;font-size: 18px;width: 600px;margin: 0 auto;position: relative;top: 60px; }
+.carousel-caption h3, .carousel-caption p { line-height: 36px; color: #fff; text-shadow: none; z-index: 9; }
 
 .carousel-inner > .item:before { position: absolute; content: ''; display: block; top: 0; left: 0; right: 0; bottom: 0; z-index: 1; background-color: rgba(0, 0, 0, 0.5); }
 
@@ -78,24 +96,24 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /* SECTION */
 .section { padding-top: 50px; padding-bottom: 50px;}
 .section .garis { width: 50px; height: 1px; background-color: #2c3e50; position: relative; display: block; margin: 0 auto; margin-bottom: 20px; }
-.section h4 {margin-bottom: 17px; font-family: 'OpenSans-Bold',sans-serif; font-size: 24px; color: #000; letter-spacing: 2.9px; }
-.section .nav-tabs-tengah { width: 35%; margin: 0 auto; position: relative; }
+.section h4 {margin-bottom: 17px; font-family: 'OpenSans-Bold',sans-serif; font-size: 24px; color: #111129; letter-spacing: 2.9px; }
+.section .nav-tabs-tengah { width: 100%; margin: 0 auto; position: relative; }
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
-    color: #fff;
-    cursor: default;
-    background-color: #2c3e50;
-    border: none;
-    font-family: 'OpenSans-SemiBold',sans-serif;
-    font-size: 14px;
+	color: #fff;
+	cursor: default;
+	background-color: #2c3e50;
+	border: none;
+	font-family: 'OpenSans-SemiBold',sans-serif;
+	font-size: 14px;
 }
 .nav-tabs>li>a{
-	    margin-right: 2px;
-    /* line-height: 1.42857143; */
-    /* border: 1px solid transparent; */
-    border-radius: 4px 4px 0 0;
-    font-family: 'OpenSans-SemiBold';
-    font-size: 14px;
-    color: #000;
+	margin-right: 2px;
+	/* line-height: 1.42857143; */
+	/* border: 1px solid transparent; */
+	border-radius: 4px 4px 0 0;
+	font-family: 'OpenSans-SemiBold';
+	font-size: 14px;
+	color: #000;
 }
 .nav-tabs{
 	border-bottom: 0;
@@ -112,6 +130,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	background-color: #f7f7f7;
 	height: 400px;
 	box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.20);
+	margin-top: 30px;
 }
 
 .img-card{
@@ -135,44 +154,62 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .desc-card a{
 	font-family: 'OpenSans-Regular',sans-serif;
 	font-size: 14px;
-	line-height: 18px;
+	line-height: 36px;
 	color: #fff;
 	position: relative;
 	top: 20px;
 	text-decoration: none;
+	float: left;
+	width: 100%;
 }
-.desc-card p.tanggal{color:#fff;float: left;margin-left: 10px;top: 40px;position: relative;}
-.desc-card span{top: 42px;float: left;color: #fff;position: relative;}
+.desc-card p.tanggal{
+	color: #fff;
+	float: left;
+	left: 60px;
+	bottom: 10px;
+	/* top: 64px; */
+	/* margin-top: 70px; */
+	/* bottom: 80px; */
+	position: absolute;
+}
+.desc-card span{
+	color: #fff;
+	position: absolute;
+	left: 30px;
+	bottom: 25px;
+}
+
 .hover-card{
 	position: absolute;
 	width: 100%;
 	height: 100%;
 	z-index: 1;
 	background-color: #2980b9;
+	opacity: 0.90;
 	top: 0;
-    border-radius: 4px;
-    display: none;
-    padding-top: 110px;
-    padding-left: 35px;
-    padding-right: 35px;
-    display: none;
-    transition: all .2s ease-in-out;
-    -webkit-transition: all .2s ease-in-out;
+	border-radius: 4px;
+	display: none;
+	padding-top: 110px;
+	padding-left: 35px;
+	padding-right: 35px;
+	display: none;
+	transition: all .2s ease-in-out;
+	-webkit-transition: all .2s ease-in-out;
 
 }
 .post-card:hover .hover-card{
 	display: block;
-    transition: all .2s ease-in-out;
-    -webkit-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+	-webkit-transition: all .2s ease-in-out;
 }
 .hover-card a {
-    color: #fff;
-    text-decoration: none;
-    display: inline-block;
-    text-align: center;
-    font-family: 'OpenSans-Regular';
-    font-size: 14px;
-    line-height: 24px;
+	color: #fff;
+	text-decoration: none;
+	display: inline-block;
+	text-align: center;
+	font-family: 'OpenSans-Regular';
+	font-size: 14px;
+	line-height: 24px;
 }
 .hover-card a:hover{
 	text-decoration: none;
@@ -183,31 +220,37 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	float: left;
 
 }
-.hover-card p{
+.hover-card p {
 	font-family: 'OpenSans-Regular';
 	font-size: 14px;
 	color: #fff;
 	float: left;
 	margin-left: 10px;
+	height: 120px;
+	overflow-y: hidden;
+	/* margin-top: -70px; */
 }
 .hover-tanggal{
 	margin: 0 auto;
-    position: relative;
-    display: block;
-    width: 155px;
-    top: 30px;
-    /* height: 100px; */
+	position: relative;
+	display: block;
+	width: 155px;
+	top: 30px;
+	/* height: 100px; */
 }
-a.read-more{
-    position: relative;
-    color: #fff;
-    padding: 20px 40px;
-    font-size: 14px;
-    font-family: 'OpenSans-Regular',sans-serif;
-    border: 1px solid #fff;
-    border-radius: 40px;
-    width: 165px;
-    margin-top: 30px;
+a.read-more {
+	position: absolute;
+	color: #fff;
+	padding: 20px 40px;
+	font-size: 14px;
+	font-family: 'OpenSans-Regular',sans-serif;
+	border: 1px solid #fff;
+	border-radius: 40px;
+	width: 165px;
+	/* margin: 0 auto; */
+	left: 0;
+	top: 40px;
+	/* margin-top: 30px; */
 }
 /* ENDCARD */
 
@@ -218,7 +261,8 @@ a.read-more{
 	position: relative;
 	width: 100%;
 	height: 333px;
-  background-color: #1f2b37;
+	background-color: #1f2b37;
+	display: inline-block;
 }
 .logo-footer{
 	position: relative;
@@ -228,11 +272,11 @@ a.read-more{
 }
 
 .menu-footer{
-width: 60%;
-position: relative;
-margin: 0 auto;
-margin-top: 30px;
-display: block;
+	width: 60%;
+	position: relative;
+	margin: 0 auto;
+	margin-top: 30px;
+	display: block;
 }
 .menu-footer ul{margin: 0;padding: 0;}
 .menu-footer ul li{
@@ -248,96 +292,276 @@ display: block;
 }
 
 .social-media{width: 25%;display: block;position: relative;margin: 0 auto;top: 37px;
-float: left;}
-.social-media a{float: left;margin: 0px 15px}
-.social-media img{float: left;}
-.footer-garis{
-	width: 700px;
-  height: 1px;
-  background-color: #ffffff;
-  display: block;
- position: relative;
- margin: 0 auto;
- top: 150px;
-}
-.footer p{
-	text-align: center;
-	position: relative;
-	font-family: 'OpenSans-Regular',sans-serif;
-	color: #fff;
-	display: inline-block;
-	width: 100%;
-	top: 100px;
-}
-/* ENDFOOTER */
-
-
-/*** HALAMAN ***/
-.halaman{
-	padding-top: 50px;
-	width: 250px;
-	display: block;
-	margin: 0 auto;
-	position: relative;
-}
-/*** ENDHALAMAN ***/
-
-
-.lupa-password{
-	float: right;
-}
-
-.tombol-masuk{
-	width: 100%;
-	background-color:  #2980b9;
-	position: relative;
-	color: #fff;
-	padding: 15px 15px;
-	display: inline-block;
-	text-align: center;
-	border-radius: 4px;
-	top: 20px;
-
-}
-
-.tombol-masuk:hover{
-	text-decoration: none;
-	color: #fff;
-}
-
-
-
-
-
-
-/*responsive*/
-@media (max-width: 500px) { 
-.footer-garis{
-	width: 100%;
+	float: left;}
+	.social-media a{float: left;margin: 0px 15px}
+	.social-media img{float: left;}
+	.footer-garis{
+		width: 700px;
+		height: 1px;
+		background-color: #ffffff;
+		display: block;
+		position: relative;
+		margin: 0 auto;
+		top: 150px;
 	}
-/*.carousel-control.left {
-    left: -30px;
-    }
-.carousel-control.right {
-    right: 15px;
-    }*/
-.carousel-control .fa-angle-left, .carousel-control .fa-angle-right {
-    position: absolute;
-    left: 10%;
-    top: 38%;
-    font-size: 30px;
-    color: #fff;
-    border: 2px solid #fff;
-    padding: 5px 15px;
-    border-radius: 30px;
-    }
-    .social-media{width: 100%;display: block;position: relative;margin: 0 auto;top: 37px;
-text-align: center;}
-.social-media a {
-    float: left;
-    margin: 20px 5px;
+	.social-media {
+		width: 100%;
+		height: auto;
+		display: inline-block;
+		position: relative;
+		margin: 0; 
+		text-align: center;
+		top: 40px; 
+		float: none; 
+	}
+	.social-media a {
+		float: none;
+		/* margin: 0 auto; */
+		/* text-align: center; */
+		width: 223px;
+		height: 40px;
+		/* position: relative; */
+		/* display: inline-block; */
+	}
+	.social-media img {
+		float: none; 
+	}
+	.footer-garis{
+		top: 70px;
+	}
+	.footer p{
+		text-align: center;
+		position: relative;
+		font-family: 'OpenSans-Regular',sans-serif;
+		color: #fff;
+		display: inline-block;
+		width: 100%;
+		top: 100px;
+	}
+	/* ENDFOOTER */
+
+
+	/*** HALAMAN ***/
+	.halaman{
+		padding-top: 50px;
+		width: 250px;
+		display: block;
+		margin: 0 auto;
+		position: relative;
+	}
+	/*** ENDHALAMAN ***/
+
+
+	.lupa-password{
+		float: right;
+	}
+
+	.tombol-masuk{
+		width: 100%;
+		background-color:  #2980b9;
+		position: relative;
+		color: #fff;
+		padding: 15px 15px;
+		display: inline-block;
+		text-align: center;
+		border-radius: 4px;
+		top: 20px;
+
+	}
+
+	.tombol-masuk:hover{
+		text-decoration: none;
+		color: #fff;
+	}
+
+/*=================================================================
+POSTINGAN + SIDE BAR
+=================================================================*/
+
+.site-main {
+	width: 70%;
+	float: left;
+	/* text-align: center; */
+	background-color: #f7f7f7;
+	/* margin: 0 auto; */
+	padding-left: 120px;
+	/* text-align: justify; */
 }
-.social-media{
-	padding-left: 20%;
+
+.site-main article{
+	width: 100%;
+	/*background-color: #daafaf;*/
+	display: inline-block;
 }
+
+.entry-content{
+	/*padding-left: 60px;*/
+	padding-right: 60px;
+	margin-bottom: 60px;
+}
+.entry-content p{
+	font-family: 'OpenSans-Regular',sans-serif;
+	font-size: 18px;
+	line-height: 36px;
+	color: #51586b;
+}
+.entry-content img{
+	max-width: 100%;
+	height: auto;
+	border-radius: 5px;
+}
+p.posted{
+	/*padding-left: 60px;*/
+	font-family: inherit;
+	font-size: 16px;
+	color: #51586b;
+	margin-top: 24px;
+	margin-bottom: 60px;
+}
+.entry-content h1{font-size: 36px}
+.entry-content h2{font-size: 24px}
+.entry-content h3{font-size: 18px}
+.entry-content h4{font-size: 16px}
+
+.entry-content h2{
+	line-height: 36px;
+	color: #51586b;
+	font-size: 24px;
+	font-weight: 800;
+}
+blockquote {
+	padding: 10px 20px;
+	margin: 0 0 20px;
+	font-size: 18px;
+	border-left: 5px solid #ff7575;
+	font-family: Consolas;
+	background: #ff75751f;
+}
+.entry-content blockquote p{
+	color: #1f263a;
+	font-style: italic;
+}
+aside {
+	width: 30%;
+	float: left;
+	padding-right: 170px;
+	background-color: #f7f7f7;
+	padding-top: 60px;
+}
+
+nav.navigation{
+	width: 100%;
+	/*background-color: #fbbbbb;*/
+	display: inline-block;
+}
+#comments{
+	width: 100%;
+	display: inline-block;
+	padding-right: 60px;
+	/*padding-left: 60px;*/
+	/*background-color: #ec7171;*/
+}
+
+h1.entry-title{
+	font-family: 'OpenSans-Regular',sans-serif;
+	color: #111129;
+	padding-top: 60px;
+	padding-right: 60px;
+	
+}
+
+
+/*SIDEBAR*/
+.screen-reader-text{
+	display: none;
+}
+
+input[type=search] {
+	width: 150px;
+	padding: 10px 10px;
+	/* -webkit-appearance: none; */
+	outline: none;
+	border: none;
+	font-size: 14px;
+	color: #111129;
+	font-weight: 400;
+	font-family: 'OpenSans-Regular';
+}
+
+input[type=submit] {
+	cursor: pointer;
+	padding: 10px 10px;
+	margin: 0;
+	border: none;
+	background-color: #2c3e50;
+	font-family: 'OpenSans-Regular';
+	color: #fff;
+	margin-left: -3px;
+}
+
+h2.widget-title{
+	font-size: 18px;
+	color: #51586b;
+	font-weight: 800;
+	letter-spacing: 2px;
+}
+#secondary ul{
+	margin: 0;
+	padding: 0;
+}
+#secondary ul > li{
+	display: block;
+	line-height: 24px;
+	margin-top: 6px;
+	font-size: 16px;
+	color: #a9a9a9;
+	margin-bottom: 6px;
+}
+#secondary ul > li > a{
+	font-size: 16px;
+	color: #337ab7;
+	text-decoration: none;
+}
+#secondary ul > li > a:hover{
+	color: #235886;
+}
+a.url{
+	font-size: 16px;
+	line-height: 24px;
+	text-decoration: none;
+}
+
+/*Entry footer*/
+footer.entry-footer{
+	/*padding-left: 60px;*/
+	font-size: 16px;
+	font-family: inherit;
+	color: #51586b;
+}
+.edit-link{
+	padding-left: 30px;
+}
+.comments-link{
+	margin-left: 30px;
+}
+
+/*KOMENTAR*/
+
+.komentar{
+	width: 100%;
+	resize: none;
+	overflow-x:hidden;
+}
+#comments input{
+	padding: 10px 10px;
+	/* -webkit-appearance: none; */
+	outline: none;
+	border: none;
+	font-size: 14px;
+	color: #111129;
+	font-weight: 400;
+	font-family: 'OpenSans-Regular';
+}
+#comments input[type=submit]{
+	color: #fff;
 }

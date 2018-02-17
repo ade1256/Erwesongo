@@ -9,24 +9,27 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
-		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php erwesongo_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
 
-	<?php erwesongo_post_thumbnail(); ?>
+<div class="col-md-5" id="post-<?php the_ID(); ?>">
+	<div class="post-card">
+		<!-- THUMBNAIL -->
+		<div class="img-card" style="background:url(<?php echo wp_get_attachment_image_url(get_post_thumbnail_id(),'post-thumbnail'); ?>);background-size:cover;"></div>
+		<!-- END THUMBNAIL -->
+		<div class="desc-card">
 
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
+			<a href="<?php the_permalink();?>"><?php the_title();?></a>
+			<span class="fa fa-calendar fa-lg"></span>
+			<p class="tanggal"><?php the_time('j F Y') ?></p>
+		</div>
 
-	<footer class="entry-footer">
-		<?php erwesongo_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+		<div class="hover-card">
+			<a href="<?php the_permalink();?>"><?php the_excerpt();?></a>
+			<div class="hover-tanggal">
+				<span class="fa fa-calendar fa-lg"></span>
+				<p class="tanggal"><?php the_time('j F Y') ?></p>
+				<a href="<?php the_permalink();?>" class="read-more">Baca</a>
+			</div>
+		</div>
+	</div>
+</div>
